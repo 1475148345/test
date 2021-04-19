@@ -1,13 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2021-04-19 10:07:22
- * @LastEditTime: 2021-04-19 10:07:45
- * @LastEditors: your name
+ * @LastEditTime: 2021-04-19 14:10:51
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vite-project\src\utils\axios.ts
  */
 import Axios from 'axios'
-import { ElMessage } from 'element-plus'
+// import { ElMessage } from 'element-plus'
 
 const baseURL = 'https://api.github.com'
 
@@ -43,10 +43,10 @@ axios.interceptors.response.use(
     if (error.response && error.response.data) {
       const code = error.response.status
       const msg = error.response.data.message
-      ElMessage.error(`Code: ${code}, Message: ${msg}`)
+      // ElMessage.error(`Code: ${code}, Message: ${msg}`)
       console.error(`[Axios Error]`, error.response)
     } else {
-      ElMessage.error(`${error}`)
+      // ElMessage.error(`${error}`)
     }
     return Promise.reject(error)
   }
