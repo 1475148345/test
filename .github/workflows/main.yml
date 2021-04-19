@@ -6,9 +6,9 @@ name: deploy
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ gh-pages ]
+    branches: [ master ]
   pull_request:
-    branches: [ gh-pages ]
+    branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -50,4 +50,4 @@ jobs:
           github_token: ${{ secrets.TEST_DEPLOY }} # secret 名
           user_name: ${{ secrets.MY_USER_NAME }}
           user_email: ${{ secrets.MY_USER_EMAIL }}
-          commit_message: Update Vite2.x + Vue3.x + TypeScript Starter # 部署时的 git 提交信息，自由填写
+          commit_message: Update Vite2.x + Vue3.x + TypeScript Starter 111 # 部署时的 git 提交信息，自由填写
